@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+ font-family:Arial;
+ text-align:center;
+ background:#111;
+ color:white;
+}
+.riga{
+ margin:10px;
+ font-size:28px;
+ padding:10px;
+}
+.primo{color:gold;}
+.secondo{color:silver;}
+.terzo{color:#cd7f32;}
+</style>
+</head>
+<body>
+
+<h1>Classifica Live</h1>
+
+<div id="tabella"></div>
+
+<script>
+function carica() {
+  google.script.run.withSuccessHandler(mostra).getClassifica();
+}
+
+function mostra(dati){
+  let html = "";
+
+  dati.forEach((riga,i)=>{
+    let classe = "";
+    if(i==0) classe="primo";
+    if(i==1) classe="secondo";
+    if(i==2) classe="terzo";
+
+    html += `<div class="riga ${classe}">
+      ${i+1}. ${riga[0]} - ${riga[1]} punti
+    </div>`;
+  });
+
+  document.getElementById("tabella").innerHTML = html;
+}
+
+carica();
+setInterval(carica,5000);
+</script>
+
+</body>
+</html>
