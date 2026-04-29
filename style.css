@@ -7,47 +7,9 @@ body {
   flex-direction: column;  
 }
 
-h1 {
-  font-family: Brush Script MT; 
-  font-style: cursive;
-  text-align: center;
-  font-size: 60px;
-  margin: 10px 0 10px 0;
-}
-
-form {
-  padding: ;
-}
-
-label {
-  font-family: Century Gothic;      
-  text-align: center;
-  font-weight: 500;
-  margin: 0 10px 0 10px;
-  /*border-bottom: 2px solid;*/
-}
-
-#domanda {
-  border: 1px solid black;
-  padding: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  background-color: #CEABDE;
-}
-
-#invia {
-  padding: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-select {
-  font-family: Century Gothic;      
-  text-align: center;
-  font-weight: 500;
-  padding-bottom: 7px;
-  margin: 0 10px 0 10px;
-  overflow-y: scroll;
+/*per la scrollbar di tuta la pagina html*/
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -62,6 +24,71 @@ select {
 .container div {
   border-radius: 15px;
   text-align: center;
+}
+
+h1 {
+  font-family: "Sofia", sans-serif;
+  font-style: cursive;
+  text-align: center;
+  font-size: 45px;
+  margin: 10px 0 10px 0;
+}
+
+.formSanremo {
+  background-color: ;
+}
+
+/*label è le scritte tipo CIAO INSERISCI IL TUO NOME*/
+label {
+  background-color: ;
+  font-family: Century Gothic;      
+  text-align: center;
+  font-weight: 500;
+  margin: 0 10px 0 10px;
+  border-bottom: 1.5px solid;
+  padding: 20px 20px 8px 20px;
+}
+
+#domanda {
+  border: ;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #CEABDE;
+  box-shadow: 0 0 10px black;
+}
+
+#invia {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.inputbase {
+  width: 250px;
+  height: 28px;
+  border-radius: 5px;
+}
+
+select {
+  font-family: Century Gothic;      
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 7px;
+  margin: 0 10px 0 10px;
+  overflow-y: scroll;
+}
+
+option {
+}
+
+button {
+  border: 2px solid #702963;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #CEABDE;
+  box-shadow: 0 0 10px black;
 }
 
 /*------------------------------------------SCROLLBAR DEL MAIN--------------------------------------------------
