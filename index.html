@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="C:\Users\simob\Desktop\BLOG DRAMA\blog_giusto\styles\image.png">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" href="C:\Users\simob\Desktop\BLOG DRAMA\blog_giusto\styles\image.png">		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 
 		<title>Sanremo</title>
 	</head>
@@ -16,53 +17,45 @@
 			<h1 id="title">Sanremo</h1>
 		</div>
 
-		<div>		
-		
-		<form action="https://script.google.com/macros/s/AKfycbwui8jkP23AZCAldBHTOcRRy6UPPfc3SBxOt9Z2q-7bIVQSCyOKQRDrqA9aRnQWKIvl/exec" method="post" id="form">
-			
+		<div class="formSanremo">		
+			<form method="POST" action="https://script.google.com/macros/s/AKfycbwbZDTK--7lS-EAxmR4GF5-hG4nULAzpmDsWxDhYHJVMACx6KwMeGO7GLOfo7ssH7l22w/exec" id="form">
+
 			<div id="domanda">
+
 			    <label>CIAO, INSERISCI IL TUO NOME</label><br><br>
-			    <input type="text" name="nome" required><br><br>		
+			    <input type="text" name="votante" required><br><br>		
 			</div>  
 
 		    <div id="domanda">
 			    <label for="primo">Primo Posto</label><br><br>
-			    <select id="primo" name="primo" required>
-			    	<option value="" disabled selected> Seleziona Cantante </option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
+			    <select class="inputbase" name="primo" required>
+			    	<option disabled selected> Seleziona Cantante </option>
+			      	<option>Sayf</option>
+			      	<option>Sal</option>
+			      	<option>Bambole</option>
+			      	<option>Sayf</option>
 			    </select>
 			    <br><br>
 		    </div>
 
 		    <div id="domanda">
 			    <label for="secondo">Secondo Posto</label><br><br>
-			    <select id="secondo" name="secondo" required>
+			    <select class="inputbase" name="secondo" required>
 			    	<option value="" disabled selected> Seleziona Cantante </option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
+			      	<option>Sayf</option>
+			      	<option>Sal</option>
+			      	<option>Bambole</option>
 			    </select>
 			    <br><br>
 		    </div>
 
 		    <div id="domanda">
 			    <label for="terzo">Terzo Posto</label><br><br>
-			    <select id="terzo" name="terzo" required>
+			    <select class="inputbase" name="terzo" required>
 			    	<option value="" disabled selected> Seleziona Cantante </option>
-			      	<option value="c1">Sayf</option>
-			      	<option value="c2">Sal</option>
-			      	<option value="c3">Bambole</option>
+			      	<option>Sayf</option>
+			      	<option>Sal</option>
+			      	<option>Bambole</option>
 			    </select>
 			    <br><br>
 		    </div>
@@ -73,42 +66,14 @@
 
 		</form>
 
+		<div id="msg"></div>
+
+	</div>
+
 	</div>
 	<script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
-	<script>
-	  const container = document.querySelector('.fireworks-wrapper');
-	  const titolo = document.querySelector('#title');
-
-	  // Inizializzazione con opzioni personalizzate
-	  const fireworks = new Fireworks.default(container, {
-	    autoresize: true,
-	    opacity: 0.5,
-	    acceleration: 1.05,
-	    friction: 0.97,
-	    gravity: 1.5,
-	    particles: 50,
-	    traceLength: 3,
-	    explosion: 5,
-	    intensity: 30,
-	  });
-
-	  // 1. All'apertura della pagina: spara per 3 secondi e poi si ferma
-	  fireworks.start();
-	  setTimeout(() => fireworks.stop(), 3000);
-
-	  // 2. Quando passi il mouse sopra il titolo
-	  titolo.addEventListener('mouseenter', () => {
-	    fireworks.start();
-	  });
-
-	  // 3. Quando togli il mouse (opzionale: smette di sparare nuovi colpi)
-	  titolo.addEventListener('mouseleave', () => {
-	    fireworks.stop();
-	  });
-	</script>
+	<script src="scripts/script.js"></script>
 	</body>
 </html>
-
-
 
 
