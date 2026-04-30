@@ -28,28 +28,24 @@ html::-webkit-scrollbar {
 
 h1 {
   font-family: "Sofia", sans-serif;
-  font-style: cursive;
+  font-style: italic;
   text-align: center;
   font-size: 45px;
   margin: 10px 0 10px 0;
 }
 
-.formSanremo {
-  background-color: ;
-}
-
 /*label è le scritte tipo CIAO INSERISCI IL TUO NOME*/
 label {
   background-color: ;
-  font-family: Century Gothic;      
+  font-family: "Quicksand", sans-serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 10px 0 10px;
   border-bottom: 1.5px solid;
   padding: 20px 20px 8px 20px;
 }
 
-#domanda {
+.domanda {
   border: ;
   padding: 20px;
   margin-bottom: 20px;
@@ -58,12 +54,22 @@ label {
   box-shadow: 0 0 10px black;
 }
 
+.domanda:hover {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  background-color: #CEABDE;
+  box-shadow: 0 0 30px white;
+}
+
 #invia {
   padding: 20px;
   margin-bottom: 10px;
   text-align: center;
 }
 
+/*classe delle select in index*/
 .inputbase {
   width: 250px;
   height: 28px;
@@ -71,15 +77,11 @@ label {
 }
 
 select {
-  font-family: Century Gothic;      
+  font-family: "Quicksand", sans-serif;      
   text-align: center;
-  font-weight: 500;
-  padding-bottom: 7px;
+  font-weight: 400;
   margin: 0 10px 0 10px;
   overflow-y: scroll;
-}
-
-option {
 }
 
 button {
@@ -91,33 +93,35 @@ button {
   box-shadow: 0 0 10px black;
 }
 
-/*------------------------------------------SCROLLBAR DEL MAIN--------------------------------------------------
-
-select::-webkit-scrollbar {
-  width: 10px;
-  /*display: none;
+button:hover {
+  border: 2px solid #702963;
+  color: white;
+  border-radius: 10px;
+  background-color: #702963;
+  box-shadow: 0 0 10px white;
 }
 
-select::-webkit-scrollbar-button{
-  display: block;
-  height: 20px;
+p {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-weight: 400;
 }
 
-select::-webkit-scrollbar-track {
-  box-shadow: inset 0px 0px 10px #702963;
-  border-radius: 20px;
+#form p {
+  border-bottom: 1px solid; /*prima era 1.5px*/
+  margin: 0 10px 15px 10px;
+  padding: 0px 0px 8px 0px;
 }
 
-select::-webkit-scrollbar-thumb {
-  background: #ba84bc;
-  border-radius: 20px;
-  box-shadow: inset 0px 0px 2px white;
-}
+/*------------------------------------------PAGINA GRAZIE--------------------------------------------------*/
 
-select::-webkit-scrollbar-thumb:hover {
-  background: #a55caa; 
+h2 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  margin: 10px 0 10px 0;
 }
-*/
 
 /*------------------------------------------FUOCHI D'ARTIFICIO--------------------------------------------------*/
 
