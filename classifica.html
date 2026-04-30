@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<style>
-body{
- font-family:Arial;
- text-align:center;
- background:#111;
- color:white;
-}
-.riga{
- margin:10px;
- font-size:28px;
- padding:10px;
-}
-.primo{color:gold;}
-.secondo{color:silver;}
-.terzo{color:#cd7f32;}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="C:\Users\simob\Desktop\BLOG DRAMA\blog_giusto\styles\image.png">   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Story+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-<h1>Classifica Live</h1>
+    <title>Sanremo</title>
+  </head>
+  <body>
 
-<div id="tabella"></div>
+  <div class="container">   
+    <div class="fireworks-wrapper">
+      <canvas id="canvas"></canvas>
+      <h1 id="title">Classifica Sanremo</h1>
+    </div>
 
-<script>
-function carica() {
-  google.script.run.withSuccessHandler(mostra).getClassifica();
-}
+    <div id="tabella">      
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+  <script>
+    const url = "https://script.google.com/macros/s/AKfycbxHncAoab_BAMp-7O_GLk3P3eMxLQ3rfxvL8M38qZDJ4qMic-RBTZiiKTT2FI7STe4gjw/exec";
 
-function mostra(dati){
-  let html = "";
+    function carica() {
+      fetch(url)
+        .then(response => response.json())
+        .then(dati => mostra(dati));
+    }
 
-  dati.forEach((riga,i)=>{
-    let classe = "";
-    if(i==0) classe="primo";
-    if(i==1) classe="secondo";
-    if(i==2) classe="terzo";
+    function mostra(dati) {
+      let html = "";
 
-    html += `<div class="riga ${classe}">
-      ${i+1}. ${riga[0]} - ${riga[1]} punti
-    </div>`;
-  });
+      dati.forEach((riga,i)=>{
+        if(riga[1] != 0){
+          html += `
+          <div class="domanda">
+            <p>${riga[0]} - ${riga[1]} punti</p>
+          </div>
+        `;
+        }
+      });
 
-  document.getElementById("tabella").innerHTML = html;
-}
+      document.getElementById("tabella").innerHTML = html;
+    }
 
-carica();
-setInterval(carica,5000);
-</script>
-
-</body>
+    carica();
+    setInterval(carica,2000);
+  </script>
+  <script src="script.js"></script>
+  </body>
 </html>
