@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="C:\Users\simob\Desktop\BLOG DRAMA\blog_giusto\styles\image.png">		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Story+Script&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style.css">
 
 		<title>Sanremo</title>
@@ -14,63 +17,61 @@
 	<div class="container">		
 		<div class="fireworks-wrapper">
 			<canvas id="canvas"></canvas>
-			<h1 id="title">Sanremo</h1>
+			<h1 id="title">Votazioni Sanremo</h1>
 		</div>
 
 		<div class="formSanremo">		
 			<form method="POST" action="https://script.google.com/macros/s/AKfycbwbZDTK--7lS-EAxmR4GF5-hG4nULAzpmDsWxDhYHJVMACx6KwMeGO7GLOfo7ssH7l22w/exec" id="form">
 
-			<div id="domanda">
+				<div class="domanda">
+					<p>CIAO, INSERISCI IL TUO NOME</p>
+				    <input type="text" name="votante" required><br><br>		
+				</div>  
 
-			    <label>CIAO, INSERISCI IL TUO NOME</label><br><br>
-			    <input type="text" name="votante" required><br><br>		
-			</div>  
+			    <div class="domanda">
+			    	<p>Primo Posto</p>
+				    <select class="inputbase" name="primo" id="primo" required>
+				    	<option value="" disabled selected> Seleziona Cantante </option>
+				      	<option>Sayf</option>
+				      	<option>Sal</option>
+				      	<option>Bambole</option>
+				      	<option>Sayf</option>
+				    </select>
+				    <br><br>
+			    </div>
 
-		    <div id="domanda">
-			    <label for="primo">Primo Posto</label><br><br>
-			    <select class="inputbase" name="primo" required>
-			    	<option disabled selected> Seleziona Cantante </option>
-			      	<option>Sayf</option>
-			      	<option>Sal</option>
-			      	<option>Bambole</option>
-			      	<option>Sayf</option>
-			    </select>
-			    <br><br>
-		    </div>
+			    <div class="domanda">
+			    	<p>Secondo Posto</p>
+				    <select class="inputbase" name="secondo" id="secondo" required>
+				    	<option value="" disabled selected> Seleziona Cantante </option>
+				      	<option>Sayf</option>
+				      	<option>Sal</option>
+				      	<option>Bambole</option>
+				    </select>
+				    <br><br>
+			    </div>
 
-		    <div id="domanda">
-			    <label for="secondo">Secondo Posto</label><br><br>
-			    <select class="inputbase" name="secondo" required>
-			    	<option value="" disabled selected> Seleziona Cantante </option>
-			      	<option>Sayf</option>
-			      	<option>Sal</option>
-			      	<option>Bambole</option>
-			    </select>
-			    <br><br>
-		    </div>
+			    <div class="domanda">
+			    	<p>Terzo Posto</p>
+				    <select class="inputbase" name="terzo" id="terzo" required>
+				    	<option value="" disabled selected> Seleziona Cantante </option>
+				      	<option>Sayf</option>
+				      	<option>Sal</option>
+				      	<option>Bambole</option>
+				    </select>
+				    <br><br>
+			    </div>
 
-		    <div id="domanda">
-			    <label for="terzo">Terzo Posto</label><br><br>
-			    <select class="inputbase" name="terzo" required>
-			    	<option value="" disabled selected> Seleziona Cantante </option>
-			      	<option>Sayf</option>
-			      	<option>Sal</option>
-			      	<option>Bambole</option>
-			    </select>
-			    <br><br>
-		    </div>
+			    <div id="invia">
+			    	<button type="submit">Invia</button>
+			    </div>
+			</form>
 
-		    <div id="invia">
-		    	<button type="submit">Invia</button>
-		    </div>
+			<div id="msg"></div>
 
-		</form>
-
-		<div id="msg"></div>
-
+		</div>
 	</div>
 
-	</div>
 	<script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
 	<script src="script.js"></script>
 	</body>
