@@ -1,9 +1,9 @@
 //PER USARE PULSANTE TORNA SU ------------------------------------------------------------------------------------------
-function scrollWin() {
-	var d = document.querySelector('.main');
-	d.style.scrollBehavior="smooth";
-	d.scrollTop = 0;
-}
+	function scrollWin() {
+		var d = document.querySelector('.main');
+		d.style.scrollBehavior="smooth";
+		d.scrollTop = 0;
+	}
 
 //PER FUOCHI D'ARTIFICIO  ----------------------------------------------------------------------------------------------
 	const container = document.querySelector('.fireworks-wrapper');
@@ -49,17 +49,16 @@ function scrollWin() {
 
 	  fetch(url, {
 	    method: "POST",
-	    body: formData
+	    body: formData,
+	    mode: "no-cors"
 	  })
-	  
-	  .then(r => r.text())
-	  .then(() => { 
-	 	document.getElementById("msg").innerHTML = "Voto inviato."; 
-	 	document.getElementById("form").reset(); 
-	 }) 
-	 .catch(() => { 
-	 	document.getElementById("msg").innerHTML = "Errore invio."; 
-	 });
+	  .then(() => {
+	    window.location.href = "grazie.html";
+	    document.getElementById("form").reset();
+	  })
+	  /*.catch(() => {
+	    document.getElementById("msg").innerHTML = "Errore invio.";
+	  });*/
 	});
 
 //PER MODIFICARE LE OPTION  ------------------------------------------------------------------------------------------------
