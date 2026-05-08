@@ -1,14 +1,16 @@
 body {
-  background-image: url("ev.jpg");
-  background-size: cover;       /* Adatta l'immagine a tutto lo schermo */
-  background-repeat: no-repeat; /* Evita che si ripeta */
-  background-position: center;  /* Centra l'immagine */
   padding-left: 5px;
   padding-right: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   color: white;
+  background: linear-gradient(
+      to right,
+      #AE47E6,
+      #08125E 30%,
+      #E647E6 90%
+  );
 }
 
 /*impedisce selezione del testo nella pagina*/
