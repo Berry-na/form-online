@@ -8,8 +8,8 @@ body {
   background: linear-gradient(
       to right,
       #AE47E6,
-      #08125E 30%,
-      #E647E6 90%
+      #08125E 30% 70%,
+      #E647E6
   );
 }
 
