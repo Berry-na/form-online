@@ -5,12 +5,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   color: white;
-  background: linear-gradient(
-      to right,
-      #AE47E6,
-      #08125E 30% 70%,
-      #E647E6
-  );
+  backgroud-color: #08125E;
 }
 
 /*impedisce selezione del testo nella pagina*/
