@@ -1,11 +1,10 @@
 body {
+ background-color: #E1CCEB;
   padding-left: 5px;
   padding-right: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  color: white;
-  backgroud-color: #08125E;
 }
 
 /*impedisce selezione del testo nella pagina*/
