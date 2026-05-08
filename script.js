@@ -37,10 +37,8 @@
 	});
 
 
-//PER CLASSIFICA LIVE  ---------------------------------------------------------------------------------------------------
-	
 //INVIARE DATI A GOOGLE SCRIPTS  -----------------------------------------------------------------------------------------
-	const url = "https://script.google.com/macros/s/AKfycbwbZDTK--7lS-EAxmR4GF5-hG4nULAzpmDsWxDhYHJVMACx6KwMeGO7GLOfo7ssH7l22w/exec";
+	const url = "https://script.google.com/macros/s/AKfycbxi2ilqNcszu4V3HVdf5WhuvlZk0Vc7gKlAsIabKv8TDt8ihFd0KDQ5SPdco1YQT2Mhow/exec";
 
 	document.getElementById("form").addEventListener("submit", function(e){
 	  e.preventDefault();
@@ -56,24 +54,30 @@
 	    window.location.href = "grazie.html";
 	    document.getElementById("form").reset();
 	  })
-	  /*.catch(() => {
-	    document.getElementById("msg").innerHTML = "Errore invio.";
-	  });*/
 	});
 
 //PER MODIFICARE LE OPTION  ------------------------------------------------------------------------------------------------
-	/*const nomi = ["Marco","Luca","Anna"];
+	const selects = document.querySelectorAll('.inputbase');
 
-	function aggiorna() {
-	  let scelto = document.getElementById("primo").value;
-	  let secondo = document.getElementById("secondo");
+	selects.forEach(select => {
+	  select.addEventListener('change', () => {
+	    // 1. Prendo tutti i valori attualmente selezionati (escludendo quelli vuoti)
+	    const valoriSelezionati = Array.from(selects)
+	      .map(s => s.value)
+	      .filter(v => v !== "");
 
-	  secondo.innerHTML = "";
+	    // 2. Ciclo su ogni select e su ogni sua opzione
+	    selects.forEach(s => {
+	      Array.from(s.options).forEach(option => {
+	        if (option.value === "") return; // Salta il placeholder
 
-	  nomi.forEach(nome => {
-	    if(nome !== scelto){
-	      secondo.innerHTML += `<option>${nome}</option>`;
-	    }
+	        // 3. Disabilita l'opzione se è già scelta in UN ALTRO menu
+	        // Ma lasciala attiva se è quella scelta nel menu corrente
+	        const giaSceltaAltrove = valoriSelezionati.includes(option.value);
+	        const sceltaInQuestoMenu = s.value === option.value;
+
+	        option.disabled = giaSceltaAltrove && !sceltaInQuestoMenu;
+	      });
+	    });
 	  });
-	}*/
-
+	});
