@@ -8,20 +8,25 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Story+Script&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 
 		<title>Sanremo</title>
 	</head>
 	<body>
 
-	<div class="container">		
+	<div class="container">
+		<div id="foot">
+			<a href=""><img src="styles/rosa.png"></a>
+			<a href="https://script.google.com/macros/s/AKfycbyuILaY49HlTQFB9fflMJzPgTSBrA_ai6aMzeEhYKUzCN-sOJnJZQ9j7k82juS3X4-3lQ/exec"><img src="styles/blu.png"></a>
+		</div>
+
 		<div class="fireworks-wrapper">
 			<canvas id="canvas"></canvas>
 			<h1 id="title">Votazioni Sanremo</h1>
 		</div>
 
 		<div class="formSanremo">		
-			<form method="POST" action="https://script.google.com/macros/s/AKfycbwbZDTK--7lS-EAxmR4GF5-hG4nULAzpmDsWxDhYHJVMACx6KwMeGO7GLOfo7ssH7l22w/exec" id="form">
+			<form method="POST" action="https://script.google.com/macros/s/AKfycbxi2ilqNcszu4V3HVdf5WhuvlZk0Vc7gKlAsIabKv8TDt8ihFd0KDQ5SPdco1YQT2Mhow/exec" id="form">
 
 				<div class="domanda">
 					<p>CIAO, INSERISCI IL TUO NOME</p>
@@ -32,10 +37,41 @@
 			    	<p>Primo Posto</p>
 				    <select class="inputbase" name="primo" id="primo" required>
 				    	<option value="" disabled selected> Seleziona Cantante </option>
-				      	<option>Sayf</option>
-				      	<option>Sal</option>
-				      	<option>Bambole</option>
-				      	<option>Sayf</option>
+				      	<option>ALBANIA: Alis - Nân</option>
+				      	<option>ARMENIA: SIMÓN - Paloma Rumba</option>
+				      	<option>AUSTRALIA: Delta Goodrem - Eclipse</option>
+				      	<option>AUSTRIA: COSMÓ - Tanzschein</option>
+				      	<option>AZERBAIJAN: JIVA - Just Go</option>
+				      	<option>BELGIUM: ESSYLA - Dancing on the Ice</option>
+				      	<option>BULGARIA: DARA - Bangaranga</option>
+				      	<option>CROATIA: LELEK - Andromeda</option>
+				      	<option>CYPRUS: Antigoni - JALLA</option>
+				      	<option>CZECHIA: Daniel Zizka - CROSSROADS</option>
+				      	<option>DENMARK: Søren Torpegaard Lund - Før Vi Går Hjem</option>
+				      	<option>ESTONIA: Vanilla Ninja - Too Epic To Be True</option>
+				      	<option>FINLAND: Linda Lampenius x Pete Parkkonen - Liekinheitin</option>
+				      	<option>FRANCE: Monroe - Regarde !</option>
+				      	<option>GEORGIA: Bzikebi - On Replay</option>
+				      	<option>GERMANY: Sarah Engels - Fire</option>
+				      	<option>GREECE: Akylas - Ferto</option>
+				      	<option>ISRAEL: Noam Bettan - Michelle</option>
+				      	<option>ITALY: Sal Da Vinci - Per Sempre Sì</option>
+				      	<option>LATVIA: Atvara - Ēnā</option>
+				      	<option>LITHUANIA: Lion Ceccah - Sólo Quiero Más</option>
+				      	<option>LUXEMBOURG: Eva Marija - Mother Nature</option>
+				      	<option>MALTA: AIDAN - Bella</option>
+				      	<option>MOLDOVA: Satoshi - Viva, Moldova!</option>
+				      	<option>MONTENEGRO: Tamara Živković - Nova Zora</option>
+				      	<option>NORWAY: JONAS LOVV - YA YA YA</option>
+				      	<option>POLAND: ALICJA - Pray</option>
+				      	<option>PORTUGAL: Bandidos do Cante - Rosa</option>
+				      	<option>ROMANIA: Alexandra Căpitănescu - Choke Me</option>
+				      	<option>SAN MARINO: SENHIT - Superstar</option>
+				      	<option>SERBIA: LAVINA - Kraj Mene</option>
+				      	<option>SWEDEN: FELICIA - My System</option>
+				      	<option>SWITZERLAND: Veronica Fusaro - Alice</option>
+				      	<option>UKRAINE: LELÉKA - Ridnym</option>
+				      	<option>UNITED KINGDOM: LOOK MUM NO COMPUTER - Eins, Zwei, Drei</option>
 				    </select>
 				    <br><br>
 			    </div>
@@ -44,9 +80,41 @@
 			    	<p>Secondo Posto</p>
 				    <select class="inputbase" name="secondo" id="secondo" required>
 				    	<option value="" disabled selected> Seleziona Cantante </option>
-				      	<option>Sayf</option>
-				      	<option>Sal</option>
-				      	<option>Bambole</option>
+				      	<option>ALBANIA: Alis - Nân</option>
+				      	<option>ARMENIA: SIMÓN - Paloma Rumba</option>
+				      	<option>AUSTRALIA: Delta Goodrem - Eclipse</option>
+				      	<option>AUSTRIA: COSMÓ - Tanzschein</option>
+				      	<option>AZERBAIJAN: JIVA - Just Go</option>
+				      	<option>BELGIUM: ESSYLA - Dancing on the Ice</option>
+				      	<option>BULGARIA: DARA - Bangaranga</option>
+				      	<option>CROATIA: LELEK - Andromeda</option>
+				      	<option>CYPRUS: Antigoni - JALLA</option>
+				      	<option>CZECHIA: Daniel Zizka - CROSSROADS</option>
+				      	<option>DENMARK: Søren Torpegaard Lund - Før Vi Går Hjem</option>
+				      	<option>ESTONIA: Vanilla Ninja - Too Epic To Be True</option>
+				      	<option>FINLAND: Linda Lampenius x Pete Parkkonen - Liekinheitin</option>
+				      	<option>FRANCE: Monroe - Regarde !</option>
+				      	<option>GEORGIA: Bzikebi - On Replay</option>
+				      	<option>GERMANY: Sarah Engels - Fire</option>
+				      	<option>GREECE: Akylas - Ferto</option>
+				      	<option>ISRAEL: Noam Bettan - Michelle</option>
+				      	<option>ITALY: Sal Da Vinci - Per Sempre Sì</option>
+				      	<option>LATVIA: Atvara - Ēnā</option>
+				      	<option>LITHUANIA: Lion Ceccah - Sólo Quiero Más</option>
+				      	<option>LUXEMBOURG: Eva Marija - Mother Nature</option>
+				      	<option>MALTA: AIDAN - Bella</option>
+				      	<option>MOLDOVA: Satoshi - Viva, Moldova!</option>
+				      	<option>MONTENEGRO: Tamara Živković - Nova Zora</option>
+				      	<option>NORWAY: JONAS LOVV - YA YA YA</option>
+				      	<option>POLAND: ALICJA - Pray</option>
+				      	<option>PORTUGAL: Bandidos do Cante - Rosa</option>
+				      	<option>ROMANIA: Alexandra Căpitănescu - Choke Me</option>
+				      	<option>SAN MARINO: SENHIT - Superstar</option>
+				      	<option>SERBIA: LAVINA - Kraj Mene</option>
+				      	<option>SWEDEN: FELICIA - My System</option>
+				      	<option>SWITZERLAND: Veronica Fusaro - Alice</option>
+				      	<option>UKRAINE: LELÉKA - Ridnym</option>
+				      	<option>UNITED KINGDOM: LOOK MUM NO COMPUTER - Eins, Zwei, Drei</option>
 				    </select>
 				    <br><br>
 			    </div>
@@ -55,9 +123,41 @@
 			    	<p>Terzo Posto</p>
 				    <select class="inputbase" name="terzo" id="terzo" required>
 				    	<option value="" disabled selected> Seleziona Cantante </option>
-				      	<option>Sayf</option>
-				      	<option>Sal</option>
-				      	<option>Bambole</option>
+				      	<option>ALBANIA: Alis - Nân</option>
+				      	<option>ARMENIA: SIMÓN - Paloma Rumba</option>
+				      	<option>AUSTRALIA: Delta Goodrem - Eclipse</option>
+				      	<option>AUSTRIA: COSMÓ - Tanzschein</option>
+				      	<option>AZERBAIJAN: JIVA - Just Go</option>
+				      	<option>BELGIUM: ESSYLA - Dancing on the Ice</option>
+				      	<option>BULGARIA: DARA - Bangaranga</option>
+				      	<option>CROATIA: LELEK - Andromeda</option>
+				      	<option>CYPRUS: Antigoni - JALLA</option>
+				      	<option>CZECHIA: Daniel Zizka - CROSSROADS</option>
+				      	<option>DENMARK: Søren Torpegaard Lund - Før Vi Går Hjem</option>
+				      	<option>ESTONIA: Vanilla Ninja - Too Epic To Be True</option>
+				      	<option>FINLAND: Linda Lampenius x Pete Parkkonen - Liekinheitin</option>
+				      	<option>FRANCE: Monroe - Regarde !</option>
+				      	<option>GEORGIA: Bzikebi - On Replay</option>
+				      	<option>GERMANY: Sarah Engels - Fire</option>
+				      	<option>GREECE: Akylas - Ferto</option>
+				      	<option>ISRAEL: Noam Bettan - Michelle</option>
+				      	<option>ITALY: Sal Da Vinci - Per Sempre Sì</option>
+				      	<option>LATVIA: Atvara - Ēnā</option>
+				      	<option>LITHUANIA: Lion Ceccah - Sólo Quiero Más</option>
+				      	<option>LUXEMBOURG: Eva Marija - Mother Nature</option>
+				      	<option>MALTA: AIDAN - Bella</option>
+				      	<option>MOLDOVA: Satoshi - Viva, Moldova!</option>
+				      	<option>MONTENEGRO: Tamara Živković - Nova Zora</option>
+				      	<option>NORWAY: JONAS LOVV - YA YA YA</option>
+				      	<option>POLAND: ALICJA - Pray</option>
+				      	<option>PORTUGAL: Bandidos do Cante - Rosa</option>
+				      	<option>ROMANIA: Alexandra Căpitănescu - Choke Me</option>
+				      	<option>SAN MARINO: SENHIT - Superstar</option>
+				      	<option>SERBIA: LAVINA - Kraj Mene</option>
+				      	<option>SWEDEN: FELICIA - My System</option>
+				      	<option>SWITZERLAND: Veronica Fusaro - Alice</option>
+				      	<option>UKRAINE: LELÉKA - Ridnym</option>
+				      	<option>UNITED KINGDOM: LOOK MUM NO COMPUTER - Eins, Zwei, Drei</option>
 				    </select>
 				    <br><br>
 			    </div>
@@ -66,14 +166,20 @@
 			    	<button type="submit">Invia</button>
 			    </div>
 			</form>
+		</div>
 
-			<div id="msg"></div>
-
+		<div id="msg">
+			<p>Hai già votato?</p>
+			<p>Clicca qui!</p>
+		</div>
+		<div id="foot">
+			<a href=""><img src="styles/logo_pianeta.jpg"></a>
+			<a href="classifica.html"><img src="styles/rosso.png"></a>
 		</div>
 	</div>
 
 	<script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
-	<script src="script.js"></script>
+	<script src="scripts/script.js"></script>
 	</body>
 </html>
 
