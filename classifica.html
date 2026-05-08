@@ -8,51 +8,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     <title>Sanremo</title>
   </head>
   <body>
 
-  <div class="container">   
-    <div class="fireworks-wrapper">
-      <canvas id="canvas"></canvas>
-      <h1 id="title">Classifica Sanremo</h1>
+    <div class="container">   
+      <div class="fireworks-wrapper">
+        <canvas id="canvas"></canvas>
+        <h1 id="title">Classifica Sanremo</h1>
+      </div>
+
+      <div class="formSanremo" id="tabella">      
+      </div>
     </div>
+    
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script>
+      const url = "https://script.google.com/macros/s/AKfycbxi2ilqNcszu4V3HVdf5WhuvlZk0Vc7gKlAsIabKv8TDt8ihFd0KDQ5SPdco1YQT2Mhow/exec";
 
-    <div id="tabella">      
-    </div>
-  </div>
-  
-  <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
-  <script>
-    const url = "https://script.google.com/macros/s/AKfycbxHncAoab_BAMp-7O_GLk3P3eMxLQ3rfxvL8M38qZDJ4qMic-RBTZiiKTT2FI7STe4gjw/exec";
+      function carica() {
+        fetch(url)
+          .then(response => response.json())
+          .then(dati => mostra(dati));
+      }
 
-    function carica() {
-      fetch(url)
-        .then(response => response.json())
-        .then(dati => mostra(dati));
-    }
+      function mostra(dati) {
+        let html = "";
 
-    function mostra(dati) {
-      let html = "";
+        dati.forEach((riga,i)=>{
+          if(riga[1] != 0){
+            html += `
+            <div class="domanda">
+              <p><b>${riga[0]}</b></p>
+              <p>${riga[1]} punti</p>
+            </div>
+          `;
+          }
+        });
 
-      dati.forEach((riga,i)=>{
-        if(riga[1] != 0){
-          html += `
-          <div class="domanda">
-            <p>${riga[0]} - ${riga[1]} punti</p>
-          </div>
-        `;
-        }
-      });
+        document.getElementById("tabella").innerHTML = html;
+      }
 
-      document.getElementById("tabella").innerHTML = html;
-    }
-
-    carica();
-    setInterval(carica,2000);
-  </script>
-  <script src="script.js"></script>
+      carica();
+      setInterval(carica,2000);
+    </script>
+  <script src="scripts/script.js"></script>
   </body>
 </html>
