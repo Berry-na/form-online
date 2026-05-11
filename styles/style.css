@@ -5,6 +5,7 @@ body {
  display: flex;
  flex-wrap: wrap;
  flex-direction: column;
+ color: white;
 }
 
 /*impedisce selezione del testo nella pagina*/
@@ -40,17 +41,6 @@ h1 {
   margin: 10px 0 10px 0;
 }
 
-/*label è le scritte tipo CIAO INSERISCI IL TUO NOME*/
-label {
-  background-color: ;
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-  font-weight: 400;
-  margin: 0 10px 0 10px;
-  border-bottom: 1.5px solid;
-  padding: 20px 20px 8px 20px;
-}
-
 .domanda {
   padding: 20px;
   margin-bottom: 20px;
@@ -63,8 +53,6 @@ label {
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  color: white;
-  background-color: #;
   box-shadow: 0 0 200px white;
 }
 
@@ -110,10 +98,6 @@ button:hover {
   box-shadow: 0 0 100px white;
 }
 
-#but {
-  width: 100%;
-}
-
 #close {
   border: 2px solid #702963;
   width: 100px;
@@ -139,7 +123,7 @@ p {
 
 .formSanremo {
   justify-self: center;
-  width: 500px;
+  width: ;
   
 }
 
