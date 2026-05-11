@@ -1,11 +1,10 @@
 body {
- background-color: #08125E;
- padding-left: 5px;
- padding-right: 5px;
- display: flex;
- flex-wrap: wrap;
- flex-direction: column;
- color: white;
+  background-color: #E1CCEB;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
 }
 
 /*impedisce selezione del testo nella pagina*/
@@ -41,19 +40,32 @@ h1 {
   margin: 10px 0 10px 0;
 }
 
+/*label è le scritte tipo CIAO INSERISCI IL TUO NOME*/
+label {
+  background-color: ;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 10px 0 10px;
+  border-bottom: 1.5px solid;
+  padding: 20px 20px 8px 20px;
+}
+
 .domanda {
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #D27CDF;
-  box-shadow: 0 0 10px white;
+  background-color: #CEABDE;
+  box-shadow: 0 0 10px black;
 }
 
 .domanda:hover {
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  box-shadow: 0 0 200px white;
+  color: white;
+  background-color: #CEABDE;
+  box-shadow: 0 0 30px white;
 }
 
 #invia {
@@ -78,24 +90,27 @@ select {
 }
 
 button {
-  color: white;
-  border: 2px solid whitesmoke;
+  border: 2px solid #702963;
   height: 40px;
   width: 200px;
   border-radius: 10px;
-  background-color: #9729A8;
-  box-shadow: 0 0 10px white;
+  background-color: #CEABDE;
+  box-shadow: 0 0 10px black;
   padding: 10px;
   margin-bottom: 10px;
   font-family: "Quicksand", sans-serif;
 }
 
 button:hover {
-  border: 2px solid whitesmoke;
+  border: 2px solid #702963;
   color: white;
   border-radius: 10px;
-  background-color: #5E49E4;
-  box-shadow: 0 0 100px white;
+  background-color: #702963;
+  box-shadow: 0 0 10px white;
+}
+
+#but {
+  width: 100%;
 }
 
 #close {
@@ -123,19 +138,17 @@ p {
 
 .formSanremo {
   justify-self: center;
-  width: ;
+  width: 500px;
   
 }
 
 input {
   margin: 10px;
-  width: 245px;
-  height: 22px;
-  border-radius: 5px;
 }
 
 img {
-  height: 70px; 
+  width: 100px;
+ 
 }
 
 #foot {
@@ -145,10 +158,13 @@ img {
   justify-content: space-between;
 }
 
-#msg {
-  background-color: ;
-  justify-self: end;
+#foot2 {
+  display: flex;
+  flex-direction: end; /* Gli elementi interni vanno in riga */
+  gap: 10px;          /* Spazio tra gli elementi */
+  justify-self: center;
 }
+
 
 /*------------------------------------------PAGINA GRAZIE--------------------------------------------------*/
 
