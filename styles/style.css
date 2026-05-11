@@ -79,7 +79,6 @@ select {
   text-align: center;
   font-weight: 400;
   margin: 0 10px 0 10px;
-  overflow-y: scroll;
 }
 
 button {
@@ -128,7 +127,6 @@ p {
 
 input {
   margin: 10px;
-  width: 245px;
   height: 22px;
   border-radius: 5px;
 }
