@@ -21,7 +21,9 @@ html::-webkit-scrollbar {
 }
 
 .container {
-  display: grid;   /* Larghezza massima della griglia */
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
   width: 90%;          /* Occupa il 90% su schermi piccoli */
   margin: 0 auto;      /* Centra la griglia nella pagina */
   gap: 10px; /* 20px sia righe che colonne - gap: 10px 30px; (10px tra righe, 30px tra colonne) */
